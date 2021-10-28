@@ -11,11 +11,11 @@ const Menu=({setPlayers, setGameActive, setHardMode})=> {
     const handleShow = () => setShow(true);
 
     const select =(op)=>{
-      if(op){
+      if(!op){
         setGameActive(true)
         setPlayers(op)
         handleClose()
-      }else if(!op){
+      }else if(op){
         setDifficulty(true)
       }
     }
@@ -23,6 +23,8 @@ const Menu=({setPlayers, setGameActive, setHardMode})=> {
     const selectDifficulty=(op)=>{
       setHardMode(op)
       setGameActive(true)
+      setDifficulty(false)
+      setPlayers(true)
       handleClose()
     }
 
