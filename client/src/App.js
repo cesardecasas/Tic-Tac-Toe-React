@@ -86,10 +86,10 @@ const App=()=> {
     }
   }
 
-  const hardCPU = async()=>{
+  const hardCPU =()=>{
         let board = new Board(field);
         let p = new Player();
-        let move = await p.getBestMove(board)
+        let move = p.getBestMove(board)
         field.splice(move, 1, currentPlayer)
         setField(field)
         checkWin()
