@@ -122,7 +122,7 @@ const App=()=> {
       {gameActive ? <h4>it's {currentPlayer} turn</h4> : <></>}
       {gameStatus === 'Won' ? <h4>Player {lastPlayer} has won</h4> : <></>}
       {!gameActive && gameStatus !== 'Won' ? <h4>Waiting for game to start</h4> : <></>}
-      {gameStatus === 'Tie' ? <h4>It's a tie</h4> : <></>}
+      {gameStatus === 'tie' ? <h4>It's a tie</h4> : <></>}
 
 
       <section style={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr', width:'300px'}}>

@@ -42,9 +42,9 @@ const Menu=({setPlayers, setGameActive, setHardMode})=> {
           <Modal.Body style={{display:'flex', justifyContent:'center'}}>
             {difficulty ? 
             <div style={{display:'flex', flexDirection:'row'}}>
-              <Button variant="dark" style={{margin:'1%'}} onClick={()=>selectDifficulty(true)}>
+              {/* <Button variant="dark" style={{margin:'1%'}} onClick={()=>selectDifficulty(true)}>
             Hard Mode
-            </Button>
+            </Button> */}
             <Button variant="dark" style={{margin:'1%'}} onClick={()=>selectDifficulty(false)}>
             Easy Mode
             </Button>
