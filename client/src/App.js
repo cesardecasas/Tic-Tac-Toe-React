@@ -86,10 +86,10 @@ const App=()=> {
     }
   }
 
-  const hardCPU = ()=>{
+  const hardCPU = async()=>{
         let board = new Board(field);
         let p = new Player();
-        let move = p.getBestMove(board)
+        let move = await p.getBestMove(board)
         field.splice(move, 1, currentPlayer)
         setField(field)
         checkWin()
@@ -107,7 +107,7 @@ const App=()=> {
 
   useEffect(()=>{
     if(singlePlayer && currentPlayer === 'O'){
-      if(hardMode){
+      if(hardMode && gameActive){
         hardCPU()
       }else if(!hardMode){
         easyCPU()
